@@ -1,0 +1,125 @@
+site_name: Стандарты разработки 1С для людей
+site_url: https://zeegin.github.io/v8std-for-humans
+site_author: Ingvar Vilkman
+
+repo_name: zeegin/v8std-for-humans
+repo_url: https://github.com/zeegin/v8std-for-humans
+edit_uri: edit/master/docs
+
+copyright: Copyright &copy; 2021 Ingvar Vilkman
+
+theme:
+  name: material
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  language: ru
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    # - toc.integrate
+  palette:
+    # Light mode
+    - teal: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: light blue
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+plugins:
+  - search:
+      lang:
+        - ru
+  
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: 'https://github.com/zeegin/v8std-for-humans'
+    - icon: fontawesome/brands/telegram
+      link: 'https://t.me/radio_ingvar'
+
+extra_css:
+  - 'assets/stylesheets/extra.css'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
+  - Стандарты:
+    - Создание и изменение объектов метаданных:
+      - Организация работы конфигурации:
+        - Общие требования к конфигурации: std/std467.md
+        - Работа в разных часовых поясах: std/std643.md
+    - Общие вопросы безопасности: 
+      - Безопасность прикладного программного интерфейса сервера: std/std678.md
